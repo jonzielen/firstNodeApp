@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res) {
+router.get('/', function(req, res, next) {
   res.render('index', {
       homepage: true,
       title: 'The best website ever!',
@@ -13,7 +13,7 @@ router.get('/', function(req, res) {
 });
 
 /* GET test page. */
-router.get('/test', function(req, res) {
+router.get('/test', function(req, res, next) {
   res.render('test', {
       bodyClass:'page test'
   });
