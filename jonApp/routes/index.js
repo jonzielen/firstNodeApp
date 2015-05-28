@@ -4,6 +4,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res) {
   res.render('index', {
+      homepage: true,
       title: 'The best website ever!',
       bodyClass:'page homepage',
       jom: 'jom',

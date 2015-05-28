@@ -1,7 +1,10 @@
 mixin link(href, name)
-  a(href=href)&attributes(attributes)= name
+  li
+    a(href=href)&attributes(attributes)= name
 
 nav#main-nav
     ul
-        li
-            +link('/test', 'test')(class="btn")
+        if !homepage
+            +link('/', 'home')(class="btn")
+
+        +link('/test', 'test')(class="btn")
