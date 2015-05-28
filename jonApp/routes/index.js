@@ -1,17 +1,22 @@
 var express = require('express');
 var router = express.Router();
-// get year
-var year = new Date();
-year = year.getFullYear()
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
   res.render('index', {
       title: 'The best website ever!',
+      bodyClass:'page homepage',
       jom: 'jom',
-      second: 'test 33333',
-      year: year
+      second: 'test 33333'
      });
 });
+
+/* GET test page. */
+router.get('/test', function(req, res) {
+  res.render('test', {
+      bodyClass:'page test'
+  });
+});
+
 
 module.exports = router;

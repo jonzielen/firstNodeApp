@@ -12,7 +12,6 @@ module.exports = function(grunt) {
           imagesDir:'images',
           javascriptsDir:'js',
           outputStyle:'compressed'
-          //outputStyle:'expanded'
         }
       }
     },
