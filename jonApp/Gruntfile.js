@@ -24,16 +24,16 @@ module.exports = function(grunt) {
       all: {
         files: [{
           expand: true,
-          cwd: 'public/js',
-          src: ['**/*.src.js', '!**/*.min.js'],
-          dest: 'public/js',
+          cwd: 'public/js/src',
+          src: '**/*.src.js',
+          dest: 'public/js/',
           ext: '.min.js'
         }],
       }
     },
     watch: {
       scripts: {
-        files:['public/js/*.js'],
+        files:['public/js/src/*.js'],
         tasks:['uglify'],
         options: {
           spawn:false,
